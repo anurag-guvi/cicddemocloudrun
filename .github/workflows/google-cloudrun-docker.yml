@@ -40,7 +40,7 @@ jobs:
         with:
           service: crdemo-cicd
           region: us-central1
-          image: docker.io/anuragpatil05524/crcdemo:cicd001
+          image: anuragpatil05524/ccrdemo:cicd001
           flags: ' --allow-unauthenticated '
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }} 
