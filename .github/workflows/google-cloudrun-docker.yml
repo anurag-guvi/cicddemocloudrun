@@ -25,6 +25,11 @@ jobs:
       env:
         PASSWORD: ${{ secrets.PASSWORD }}
       run: mvn compile jib:build --file pom.xml
+                   
+                   
+    - name: Clear GitHub Actions cache
+      run: rm -rf ~/.cache
+
 
   deploy:
     runs-on: ubuntu-latest
